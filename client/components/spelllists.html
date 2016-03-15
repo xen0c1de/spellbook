@@ -1,0 +1,9 @@
+<template name="spelllists">
+  <div class="spells">
+    <ul>
+      {{#each spelllists}}
+        <li><a href="/spelllist/{{_id}}">{{name}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</template>

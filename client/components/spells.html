@@ -1,0 +1,22 @@
+<template name="spells">
+  <div class="search">
+    {{> EasySearch.Input index=index placeholder="Search..." }}
+  </div>
+  {{#EasySearch.IfInputEmpty index=index}}
+    <div class="spells">
+      <ul>
+        {{#each spells}}
+          <li><a href="/spell/{{_id}}">{{name}}</a>  [<a href="#" class="delete-spell">Delete</a>]</li>
+        {{/each}}
+      </ul>
+    </div>
+  {{else}}
+    <div class="spells">
+      <ul>
+        {{#EasySearch.Each index=index}}
+          <li><a href="/spell/{{_id}}">{{name}}</a>  [<a href="#" class="delete-spell">Delete</a>]</li>
+        {{/EasySearch.Each}}
+      </ul>
+    </div>
+  {{/EasySearch.IfInputEmpty}}
+</template>

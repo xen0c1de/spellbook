@@ -1,0 +1,26 @@
+<template name="spellbookPage">
+    <h2>Spellbook: {{name}}</h2>
+    {{> preparedSpells}}
+    {{> knownSpells}}
+</template>
+
+<template name="preparedSpells">
+  Prepared Spells:
+  <div class="spelllist">
+    {{#each spellsPrepared}}
+      <li><a href="/spell/{{_id}}">{{name}}</a>  [<a href="#" class="remove-prepared">Remove</a>]</li>
+    {{/each}}
+  </div>
+</template>
+
+<template name="knownSpells">
+  Known Spells:
+  <div class="spelllist">
+    {{#each spellsKnown}}
+      <li>
+        <a href="/spell/{{_id}}">{{name}}</a>  [<a href="#" class="remove-known">Remove</a>]
+        [<a href="#" class="prepare-spell">Prepare</a>]
+      </li>
+    {{/each}}
+  </div>
+</template>

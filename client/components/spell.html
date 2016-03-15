@@ -1,0 +1,23 @@
+<template name="spell">
+
+<div class="spell well well-lg">
+
+    <h3>{{ name }}</h3>
+    {{ school }}{{#if subschool }}({{ subschool }}){{/if}}{{#if descriptor }}[{{ descriptor }}]{{/if}}<br>
+    <b>Level:</b> {{#each level}}{{ name }} {{ level }}, {{/each}} <br>
+    <b>Components:</b> {{ components }}<br>
+    <b>Casting Time:</b> {{ castingTime }}<br>
+    <b>Range:</b> {{ range }}<br>
+    <b>Effect:</b> {{ effect }}<br>
+    <b>Duration:</b> {{ duration }}<br>
+    <b>Saving Throw:</b> {{ savingThrow }}<br>
+    <b>Spell Resistance</b> {{ spellResistance }}<br>
+    {{ description }} <br>
+    {{#if materialComponent }}<i>Material Components:</i> {{ materialComponent }}<br>{{/if}}
+    {{#if focus }}<i>Focus:</i> {{ focus }}<br>{{/if}}
+
+    [<a href="/updatespell/{{_id}}">Update spell</a>]<br>
+
+    <button type="button" class="btn btn-lg btn-primary btn-block">Add to known spells</button>
+</div>
+</template>

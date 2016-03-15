@@ -1,0 +1,16 @@
+<template name="spellbooks">
+    <h2>Spellbooks</h2>
+    {{> spellbookCreate}}
+    <ul>
+        {{#each spellbooks}}
+          <li>
+            {{#if activeSpellbook}}
+              <input type="radio" class="activeSpellbook" name="activeSpellbook" value="{{_id}}" checked>
+            {{else}}
+              <input type="radio" class="activeSpellbook" name="activeSpellbook" value="{{_id}}">
+            {{/if}}
+            <a href="/spellbook/{{_id}}">{{name}}</a>  [<a href="#" class="delete-spellbook">Delete</a>]
+          </li>
+        {{/each}}
+    </ul>
+</template>

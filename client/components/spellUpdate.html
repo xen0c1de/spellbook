@@ -1,0 +1,73 @@
+<template name="spellUpdate">
+
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<form>
+    <div class="form-group">
+        <label>Spell Name</label>
+        <input type="text" name="spellname" class="form-control" value="{{name}}">
+    </div>
+    <div class="form-group">
+        <label>School</label>
+        <input type="text" name="school" class="form-control" value="{{school}}">
+    </div>
+    <div class="form-group">
+        <label>Subschool(optional)</label>
+        <input type="text" name="subschool" class="form-control" value="{{subschool}}">
+    </div>
+    <div class="form-group">
+        <label>Descriptor(optional)</label>
+        <input type="text" name="descriptor" class="form-control" value="{{descriptor}}">
+    </div>
+    <div class="form-group">
+        <label>Level</label>
+        <input type="number" name="level" class="form-control" value="{{level}}">
+    </div>
+    <div class="form-group">
+        <label>Components</label>
+        <input type="text" name="spellcomponents" class="form-control" value="{{components}}">
+    </div>
+    <div class="form-group">
+        <label>Casting Time</label>
+        <input type="text" name="castingtime" class="form-control" value="{{castingTime}}">
+    </div>
+    <div class="form-group">
+        <label>Range</label>
+        <input type="text" name="range" class="form-control" value="{{range}}">
+    </div>
+    <div class="form-group">
+        <label>Effect</label>
+        <input type="text" name="effect" class="form-control" value="{{effect}}">
+    </div>
+    <div class="form-group">
+        <label>Duration</label>
+        <input type="text" name="duration" class="form-control" value="{{duration}}">
+    </div>
+    <div class="form-group">
+        <label>Saving Throw</label>
+        <input type="text" name="savingthrow" class="form-control" value="{{savingThrow}}">
+    </div>
+    <div class="form-group">
+        <label>Spell Resistance</label>
+        <input type="text" name="spellresistance" class="form-control" value="{{spellResistance}}">
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea type="text" name="spelldescription" class="form-control">{{description}}</textarea>
+    </div>
+    <div class="form-group">
+        <label>Material Components</label>
+        <textarea type="text" name="materialcomponents" class="form-control">{{materialComponents}}</textarea>
+    </div>
+    <div class="form-group">
+        <label>Focus</label>
+        <input type="text" name="focus" class="form-control" value="{{focus}}">
+    </div>
+
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Update Spell</button>
+</form>
+</div>
+</div>
+</div>
+</template>
